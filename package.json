@@ -1,8 +1,26 @@
 {
   "name": "sweep",
-  "description": "Create stunning gradients in seconds. A beautiful, modern gradient generator",
+  "description": "Create stunning gradients in seconds. A beautiful, modern gradient generator.",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": "Johuniq <support@johuniq.tech>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Johuniq/sweep.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Johuniq/sweep/issues"
+  },
+  "homepage": "https://github.com/Johuniq/sweep#readme",
+  "keywords": [
+    "gradient",
+    "css",
+    "design-tools",
+    "nextjs",
+    "react",
+    "tailwind"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
