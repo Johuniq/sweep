@@ -1,5 +1,5 @@
+import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Footer } from "@/components/ui/footer";
 import { Header } from "@/components/ui/navbar";
 import {
   constructMetadata,
@@ -7,6 +7,7 @@ import {
   generateWebApplicationSchema,
   generateWebsiteSchema,
 } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -38,6 +39,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta
+          name="google-site-verification"
+          content="kShk8qX1hFxuY6ZPXpgWPz7r-MdG_w_VA32ZJoEoL00"
+        />
+        <meta name="msvalidate.01" content="117FCF20377F6D1208898A5975FB202C" />
+        <meta name="yandex-verification" content="ef9cdf83c927c158" />
         {/* Structured Data - JSON-LD */}
         <script
           type="application/ld+json"
@@ -80,6 +87,7 @@ export default function RootLayout({
           <footer>
             <Footer />
           </footer>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

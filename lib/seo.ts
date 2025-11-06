@@ -40,7 +40,7 @@ export const siteConfig = {
   category: "Design Tools",
   links: {
     github: "https://github.com/johuniq/sweep",
-    twitter: "https://twitter.com/sweep",
+    twitter: "https://twitter.com/johuniq",
   },
 };
 
