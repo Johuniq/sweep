@@ -6,7 +6,7 @@ export const siteConfig = {
   description:
     "Create stunning, mesmerizing CSS gradients in seconds. A beautiful, modern gradient generator with live preview, color picker, and one-click export. Perfect for designers and developers.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://sweep.johuniq.tech",
-  ogImage: "/og-image.png",
+  ogImage: "/opengraph-image.png",
   keywords: [
     "gradient generator",
     "css gradient",
