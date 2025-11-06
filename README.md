@@ -1,4 +1,3 @@
-````markdown
 <div align="center">
   <h1>Sweep</h1>
   <p><strong>A modern, open-source gradient generator for designers and developers</strong></p>
@@ -196,4 +195,3 @@ For security issues or private inquiries, contact: **support@johuniq.tech**
 <div align="center">
   Made with ❤️ by <a href="https://johuniq.tech">Johuniq</a>
 </div>
-````
