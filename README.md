@@ -182,8 +182,6 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 - **Website**: [sweep.johuniq.tech](https://sweep.johuniq.tech)
 - **GitHub**: [github.com/Johuniq/sweep](https://github.com/Johuniq/sweep)
 - **Report Issues**: [GitHub Issues](https://github.com/Johuniq/sweep/issues)
-- **Company**: [johuniq.tech](https://johuniq.tech)
-
 ---
 
 ## 📧 Contact
