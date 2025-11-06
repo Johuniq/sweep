@@ -13,7 +13,7 @@ export function GradientGenerator() {
 
   return (
     <div className="mt-10 flex items-center justify-center px-4 pb-8 sm:px-6 lg:px-8 xl:px-0">
-      <div className="mx-auto w-full max-w-7xl space-y-6 rounded-2xl border-2 bg-popover/80 p-4 sm:p-6 lg:p-8">
+      <div className="mx-auto w-full max-w-6xl space-y-6 rounded-2xl border-2 bg-popover/80 p-4 sm:p-6 lg:p-8">
         <div className="relative w-full">
           <canvas
             ref={displayCanvasRef}

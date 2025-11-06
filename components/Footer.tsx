@@ -19,7 +19,7 @@ export function Footer() {
       <div className="flex items-center justify-center gap-6 py-6">
         <Link
           aria-label="GitHub"
-          href="https://github.com/Johuniq/medixpos"
+          href="https://github.com/Johuniq/sweep"
           rel="noreferrer"
           target="_blank"
           className={Underline}

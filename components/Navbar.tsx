@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
-import { GitHubStarsButton } from "./github-star-button";
+import { GitHubStarsButton } from "./ui/github-star-button";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);

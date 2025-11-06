@@ -1,6 +1,6 @@
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Header } from "@/components/ui/navbar";
 import {
   constructMetadata,
   generateOrganizationSchema,
