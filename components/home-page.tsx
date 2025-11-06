@@ -15,7 +15,7 @@ export default function HomePageClient() {
 
   return (
     <div className="relative">
-      <div className="lg:pt-44 pt-28 pb-20">
+      <div className="lg:pt-48 pt-28 pb-20">
         <div className="">
           <Image
             src="https://res.cloudinary.com/deelfmnhg/image/upload/v1737474221/grad_mscerb.png"
@@ -24,7 +24,21 @@ export default function HomePageClient() {
             width={700}
             className="absolute -top-28 -z-10 min-h-screen w-full object-cover"
           />
-
+          <a
+            href="https://www.producthunt.com/products/sweep-5?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-sweep&#0045;7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-auto block w-fit mb-4"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1035311&theme=dark&t=1762458300191"
+              alt="Sweep - Create stunning gradients in seconds | Product Hunt"
+              style={{ width: "240px", height: "45px" }}
+              width="200"
+              height="40"
+            />
+          </a>
           <h1 className="text-5xl leading-none font-semibold tracking-tighter text-balance sm:text-6xl md:text-7xl lg:text-8xl text-center">
             <LineShadowText className="italic" shadowColor={shadowColor}>
               SWEEP
