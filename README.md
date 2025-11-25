@@ -61,16 +61,6 @@ pnpm dev
 
 Visit [http://localhost:3000](http://localhost:3000) to see the app running.
 
-### Environment Variables
-
-Create a `.env.local` file in the root directory:
-
-```env
-# Optional: Analytics and site configuration
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your_verification_code
-```
-
 ---
 
 ## 📦 Tech Stack
@@ -182,6 +172,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 - **Website**: [sweep.jolyui.dev](https://sweep.jolyui.dev)
 - **GitHub**: [github.com/Johuniq/sweep](https://github.com/Johuniq/sweep)
 - **Report Issues**: [GitHub Issues](https://github.com/Johuniq/sweep/issues)
+
 ---
 
 ## 📧 Contact
