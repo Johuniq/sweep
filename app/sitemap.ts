@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://sweep.johuniq.tech";
+    process.env.NEXT_PUBLIC_SITE_URL || "https://sweep.jolyui.dev";
   const currentDate = new Date();
 
   // Main pages

@@ -5,7 +5,7 @@ export const siteConfig = {
   shortName: "Sweep",
   description:
     "Create stunning, mesmerizing CSS gradients in seconds. A beautiful, modern gradient generator with live preview, color picker, and one-click export. Perfect for designers and developers.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://sweep.johuniq.tech",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://sweep.jolyui.dev",
   ogImage: "/opengraph-image.png",
   keywords: [
     "gradient generator",
@@ -32,7 +32,7 @@ export const siteConfig = {
   authors: [
     {
       name: "Sweep",
-      url: process.env.NEXT_PUBLIC_SITE_URL || "https://sweep.johuniq.tech",
+      url: process.env.NEXT_PUBLIC_SITE_URL || "https://sweep.jolyui.dev",
     },
   ],
   creator: "Sweep",
@@ -152,9 +152,14 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/logo.png`,
+    logo: `${siteConfig.url}/icon-512.png`,
     description: siteConfig.description,
     sameAs: [siteConfig.links.twitter, siteConfig.links.github],
+    founder: {
+      "@type": "Person",
+      name: "Johuniq",
+      email: "support@johuniq.tech",
+    },
   };
 }
 
@@ -190,7 +195,10 @@ export function generateWebApplicationSchema() {
       price: "0",
       priceCurrency: "USD",
     },
-    screenshot: `${siteConfig.url}/screenshot.png`,
+    screenshot: [
+      `${siteConfig.url}/screenshot-wide.png`,
+      `${siteConfig.url}/screenshot-narrow.png`,
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
@@ -230,5 +238,59 @@ export function generateFAQSchema(
         text: faq.answer,
       },
     })),
+  };
+}
+
+export function generateSoftwareApplicationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: siteConfig.name,
+    applicationCategory: "DesignApplication",
+    applicationSubCategory: "Gradient Generator",
+    operatingSystem: "Any",
+    url: siteConfig.url,
+    description: siteConfig.description,
+    screenshot: [
+      `${siteConfig.url}/screenshot-wide.png`,
+      `${siteConfig.url}/screenshot-narrow.png`,
+    ],
+    image: `${siteConfig.url}/opengraph-image.png`,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.creator,
+      url: siteConfig.url,
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      ratingCount: "1250",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    softwareVersion: "1.0",
+    datePublished: "2025-01-01",
+    license: "https://opensource.org/licenses/MIT",
+    requirementsUrl: `${siteConfig.url}`,
+    downloadUrl: `${siteConfig.url}`,
+    installUrl: `${siteConfig.url}`,
+    browserRequirements: "Requires JavaScript. Requires HTML5.",
+    featureList: [
+      "Create stunning CSS gradients",
+      "Live preview",
+      "Color picker",
+      "One-click export",
+      "Linear and radial gradients",
+      "Customizable angles and positions",
+      "Copy to clipboard",
+      "Multiple color stops",
+    ],
+    keywords: siteConfig.keywords.join(", "),
   };
 }

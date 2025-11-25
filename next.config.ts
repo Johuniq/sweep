@@ -72,7 +72,7 @@ const nextConfig: NextConfig = {
       //       value: 'www.sweep.com',
       //     },
       //   ],
-      //   destination: 'https://sweep.johuniq.tech/:path*',
+      //   destination: 'https://sweep.jolyui.dev/:path*',
       //   permanent: true,
       // },
     ];

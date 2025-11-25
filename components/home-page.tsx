@@ -15,18 +15,22 @@ export default function HomePageClient() {
   const shadowColor = theme.resolvedTheme === "dark" ? "white" : "black";
 
   return (
-    <div className="relative">
+    <main className="relative" aria-label="Gradient Generator Application">
       <div className="lg:pt-48 pt-28 pb-20">
-        <div className="">
+        <section aria-labelledby="hero-heading">
           <Image
             src="https://res.cloudinary.com/deelfmnhg/image/upload/v1737474221/grad_mscerb.png"
-            alt="hero_bg_sweep.png"
+            alt="Colorful gradient background"
             height={700}
             width={700}
             className="absolute -top-28 -z-10 min-h-screen w-full object-cover"
+            priority
           />
 
-          <h1 className="text-5xl leading-none font-semibold tracking-tighter text-balance sm:text-6xl md:text-7xl lg:text-8xl text-center">
+          <h1 
+            id="hero-heading"
+            className="text-5xl leading-none font-semibold tracking-tighter text-balance sm:text-6xl md:text-7xl lg:text-8xl text-center"
+          >
             <LineShadowText className="italic" shadowColor={shadowColor}>
               SWEEP
             </LineShadowText>
@@ -44,11 +48,12 @@ export default function HomePageClient() {
           <div className="w-full flex items-center justify-center mt-4 ">
             <Link
               href={
-                "https://www.producthunt.com/products/sweep-5?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-sweep&#0045;7"
+                "https://fazier.com/launches/sweep"
               }
+              aria-label="View Sweep on Fazier"
             >
               <Image
-                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1035311&theme=dark&t=1762458300191"
+                src="https://fazier.com/api/v1/public/badges/embed_image.svg?launch_id=5885&badge_type=featured&theme=dark"
                 alt="Sweep - Create stunning gradients in seconds | Product Hunt"
                 style={{ width: "240px", height: "45px" }}
                 width="200"
@@ -56,12 +61,13 @@ export default function HomePageClient() {
               />
             </Link>
             <Link
-              href="https://fazier.com/launches/sweep.johuniq.tech"
+              href="https://fazier.com/launches/sweep"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View Sweep launch on Fazier"
             >
               <Image
-                src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=dark"
+                src="https://fazier.com/api/v1/public/badges/embed_image.svg?launch_id=5885&badge_type=daily&theme=dark"
                 width={240}
                 height={45}
                 alt="Fazier badge"
@@ -69,10 +75,12 @@ export default function HomePageClient() {
               />
             </Link>
           </div>
-        </div>
+        </section>
 
-        <GradientGenerator />
+        <section aria-label="Gradient Generator Tool">
+          <GradientGenerator />
+        </section>
       </div>
-    </div>
+    </main>
   );
 }

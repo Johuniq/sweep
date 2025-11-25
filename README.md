@@ -6,7 +6,7 @@
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
   [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
   
-  [Live Demo](https://sweep.johuniq.tech) · [Report Bug](https://github.com/Johuniq/sweep/issues) · [Request Feature](https://github.com/Johuniq/sweep/issues)
+  [Live Demo](https://sweep.jolyui.dev) · [Report Bug](https://github.com/Johuniq/sweep/issues) · [Request Feature](https://github.com/Johuniq/sweep/issues)
 </div>
 
 ---
@@ -179,7 +179,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ## 🔗 Links
 
-- **Website**: [sweep.johuniq.tech](https://sweep.johuniq.tech)
+- **Website**: [sweep.jolyui.dev](https://sweep.jolyui.dev)
 - **GitHub**: [github.com/Johuniq/sweep](https://github.com/Johuniq/sweep)
 - **Report Issues**: [GitHub Issues](https://github.com/Johuniq/sweep/issues)
 ---
