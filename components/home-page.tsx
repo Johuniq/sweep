@@ -1,5 +1,6 @@
 "use client";
 
+import { AnnouncementBanner } from "@/components/announcement-banner";
 import { GradientGenerator } from "@/components/ui/gradient-generator";
 import { LineShadowText } from "@/components/ui/line-shadow-text";
 import { MorphingText } from "@/components/ui/morphing-text";
@@ -16,6 +17,24 @@ export default function HomePageClient() {
 
   return (
     <main className="relative" aria-label="Gradient Generator Application">
+      <AnnouncementBanner id="jolyui-announcement" variant="rainbow">
+        <div className="flex items-center justify-center gap-2 flex-wrap text-white">
+          <span className="text-lg">🎉</span>
+          <span className="text-sm sm:text-base font-medium">
+            JolyUI is live now! I'm excited to share Joly UI, a new component
+            library I've built on top of shadcn/ui and Radix UI.
+          </span>
+          <a
+            href="https://github.com/johuniq/jolyui"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm sm:text-base font-semibold underline hover:no-underline transition-all text-white"
+          >
+            Repo: https://github.com/johuniq/jolyui
+          </a>
+          <span className="text-lg">🚀</span>
+        </div>
+      </AnnouncementBanner>
       <div className="lg:pt-48 pt-28 pb-20">
         <section aria-labelledby="hero-heading">
           <Image
@@ -27,7 +46,7 @@ export default function HomePageClient() {
             priority
           />
 
-          <h1 
+          <h1
             id="hero-heading"
             className="text-5xl leading-none font-semibold tracking-tighter text-balance sm:text-6xl md:text-7xl lg:text-8xl text-center"
           >
@@ -47,9 +66,7 @@ export default function HomePageClient() {
           </TextAnimate>
           <div className="w-full flex items-center justify-center mt-4 ">
             <Link
-              href={
-                "https://fazier.com/launches/sweep"
-              }
+              href={"https://fazier.com/launches/sweep"}
               aria-label="View Sweep on Fazier"
             >
               <Image

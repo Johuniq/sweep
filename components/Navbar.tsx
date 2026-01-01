@@ -16,7 +16,10 @@ export const Header = () => {
   }, []);
   return (
     <header>
-      <nav className="fixed left-0 w-full z-20 px-2">
+      <nav
+        className="fixed left-0 w-full z-20 px-2"
+        style={{ top: "var(--fd-banner-height, 0)" }}
+      >
         <div
           className={cn(
             "mx-auto mt-2 w-full max-w-6xl px-4 transition-all duration-300 sm:px-6 lg:px-12",
