@@ -1,6 +1,9 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
+
 import { AnnouncementBanner } from "@/components/announcement-banner";
+import { Button } from "@/components/ui/button";
 import { GradientGenerator } from "@/components/ui/gradient-generator";
 import { LineShadowText } from "@/components/ui/line-shadow-text";
 import { MorphingText } from "@/components/ui/morphing-text";
@@ -18,21 +21,20 @@ export default function HomePageClient() {
   return (
     <main className="relative" aria-label="Gradient Generator Application">
       <AnnouncementBanner id="jolyui-announcement" variant="rainbow">
-        <div className="flex items-center justify-center gap-2 flex-wrap text-white">
-          <span className="text-lg">🎉</span>
-          <span className="text-sm sm:text-base font-medium">
-            JolyUI is live now! I'm excited to share Joly UI, a new component
-            library I've built on top of shadcn/ui and Radix UI.
+        <div className="flex items-center justify-center gap-3 text-white">
+          <span className="font-medium hidden sm:inline">
+            🎉 Introducing JolyUI: A modern component library built on shadcn/ui.
           </span>
-          <a
+          <span className="font-medium sm:hidden">
+            🎉 JolyUI is live!
+          </span>
+          <Link
             href="https://github.com/johuniq/jolyui"
             target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm sm:text-base font-semibold underline hover:no-underline transition-all text-white"
+            className="inline-flex items-center gap-1 rounded-full bg-black/20 px-3 py-1 text-sm font-medium text-white hover:bg-black/40 transition-colors backdrop-blur-sm"
           >
-            Repo: https://github.com/johuniq/jolyui
-          </a>
-          <span className="text-lg">🚀</span>
+            Star on GitHub <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </AnnouncementBanner>
       <div className="lg:pt-48 pt-28 pb-20">
@@ -64,32 +66,18 @@ export default function HomePageClient() {
             Where colors breathe, blend, and become art. Craft mesmerizing
             gradients that speak to the soul.
           </TextAnimate>
-          <div className="w-full flex items-center justify-center mt-4 ">
+          <div className="w-full flex items-center justify-center mt-8">
             <Link
-              href={"https://fazier.com/launches/sweep"}
-              aria-label="View Sweep on Fazier"
-            >
-              <Image
-                src="https://fazier.com/api/v1/public/badges/embed_image.svg?launch_id=5885&badge_type=featured&theme=dark"
-                alt="Sweep - Create stunning gradients in seconds | Product Hunt"
-                style={{ width: "240px", height: "45px" }}
-                width="200"
-                height="40"
-              />
-            </Link>
-            <Link
-              href="https://fazier.com/launches/sweep"
+              href="https://github.com/johuniq/jolyui"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="View Sweep launch on Fazier"
             >
-              <Image
-                src="https://fazier.com/api/v1/public/badges/embed_image.svg?launch_id=5885&badge_type=daily&theme=dark"
-                width={240}
-                height={45}
-                alt="Fazier badge"
-                className="w-60 h-[45px]"
-              />
+              <Button
+                size="lg"
+                className="rounded-full text-base h-12 px-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                Explore JolyUI <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </Link>
           </div>
         </section>

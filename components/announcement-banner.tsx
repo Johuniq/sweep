@@ -101,7 +101,12 @@ export function AnnouncementBanner({
   const globalKey = id ? `nd-banner-${id}` : null;
 
   useEffect(() => {
-    if (globalKey) setOpen(localStorage.getItem(globalKey) !== "true");
+    if (globalKey) {
+      // Defer setOpen to avoid synchronous state update in effect
+      setTimeout(() => {
+        setOpen(localStorage.getItem(globalKey) !== "true");
+      }, 0);
+    }
   }, [globalKey]);
 
   if (!open) return null;
@@ -111,14 +116,14 @@ export function AnnouncementBanner({
       id={id}
       {...props}
       className={cn(
-        "sticky top-0 z-40 flex flex-row items-center justify-center px-4 text-center text-sm font-medium",
+        "sticky top-0 z-40 flex flex-row items-center justify-center px-4 py-2 text-center text-sm font-medium",
         variant === "normal" && "bg-fd-secondary",
         variant === "rainbow" && "bg-fd-background",
         !open && "hidden",
         props.className
       )}
       style={{
-        height,
+        minHeight: height,
       }}
     >
       {changeLayout && open ? (
@@ -159,8 +164,12 @@ export function AnnouncementBanner({
           className={cn(
             buttonVariants({
               variant: "ghost",
-              className:
-                "absolute cursor-pointer end-2 md:end-20 top-1/2 -translate-y-1/2 text-fd-muted-foreground/50",
+              className: cn(
+                "absolute cursor-pointer end-4 top-1/2 -translate-y-1/2 transition-colors",
+                variant === "rainbow"
+                  ? "text-white/80 hover:text-white"
+                  : "text-muted-foreground hover:text-foreground"
+              ),
               size: "icon",
             })
           )}
@@ -172,9 +181,6 @@ export function AnnouncementBanner({
   );
 }
 
-const maskImage =
-  "linear-gradient(to bottom,white,transparent), radial-gradient(circle at top center, white, transparent)";
-
 function flow({ colors }: { colors: string[] }) {
   return (
     <>
@@ -182,20 +188,17 @@ function flow({ colors }: { colors: string[] }) {
         className="absolute inset-0 z-[-1]"
         style={
           {
-            maskImage,
-            maskComposite: "intersect",
-            animation: "fd-moving-banner 20s linear infinite",
-            backgroundImage: `repeating-linear-gradient(70deg, ${[
-              ...colors,
-              colors[0],
-            ]
-              .map((color, i) => `${color} ${(i * 50) / colors.length}%`)
-              .join(", ")})`,
+            backgroundImage: `linear-gradient(90deg, ${colors.join(", ")}, ${
+              colors[0]
+            })`,
             backgroundSize: "200% 100%",
-            filter: "saturate(2)",
+            animation: "fd-moving-banner 10s linear infinite",
+            filter: "blur(10px)",
+            opacity: 0.8,
           } as object
         }
       />
+      <div className="absolute inset-0 z-[-1] backdrop-blur-[2px]" />
       <style>
         {`@keyframes fd-moving-banner {
             from { background-position: 0% 0;  }
